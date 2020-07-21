@@ -1,0 +1,82 @@
+extends ../layout/main
+
+block variables
+	- var title = 'LevelUp - About';
+	- var pageClass = 'about-page';
+
+block content
+	section
+		.block-about
+			.block-about__title
+				span#aboutAbout
+				#console.console-underscore &#95;
+			.block-about__img
+				img(src="/assets/img/hello.jpg", alt="Hello")
+			.block-about__text 
+				h2.content-title.content-title-bg.pb-3 Clients choose us 
+				p.block-about__text-content LevelUp is a team of highly qualified barbers dedicated to offering the best value. 
+				p.block-about__text-content We take pride in each service we provide. Every effort is made to give you the best barber experience whatever your haircut or shaving style is.
+				p.block-about__text-content Our barbershop is committed to quality haircuts and exceptional customer service at affordable prices in a relaxing friendly atmosphere. Our staff delivers the experience tailored to the needs, requirements and budget of our clients. 
+				p.block-about__text-content So, come and try! Make sure you are in the right place. Don't miss your chance to look your best!
+			a(href="#title2").block-about__icon
+				img(src="/assets/img/flash.png", alt="Flash")
+		#title2.separator
+		.block-about
+			.block-about__title
+				span#aboutHours
+				#console.console-underscore &#95;
+			.block-about__text 
+				h2.content-title.content-title-bg.pb-3 Working hours
+				p.block-about__text-content Tuesday-Friday: from 7:00am to 7:00pm
+				p.block-about__text-content Saturday: from 9:00am to 9:00pm
+				p.block-about__text-content Sunday: from 10:00am to 10:00pm
+				p.block-about__text-content Monday: closed 
+			.block-about__img
+				img(src="/assets/img/hours.jpg", alt="Hours")
+			a(href='#title3').block-about__icon
+				img(src="/assets/img/flash.png", alt="Flash")
+		#title3.separator
+		.block-about
+			.block-about__title
+				span#aboutServices
+				#console.console-underscore &#95;
+			.block-about__img
+				img(src="/assets/img/services.jpg", alt="Services")
+			.block-about__text 
+				h2.content-title.content-title-bg.pb-3 Our services
+				.block-about__services.pb-2 
+					img(src="/assets/img/beard-icon.png", alt="Beard trim").service-icon.block-about__services-img
+					h3.block-about__services-title.pb-1 Beard trim
+					p Beard trim is a must for all men who want to have a beard that looks stunning
+				.block-about__services.pb-2 
+					img(src="/assets/img/mustache-icon.png", alt="Mustache trim").service-icon.block-about__services-img
+					h3.block-about__services-title.pb-1 Mustache trim
+					p Mustaches are a classic facial hair choice for men, and they never seem to go out of style for long
+				.block-about__services.pb-2 
+					img(src="/assets/img/shaves-icon.png", alt="Shaves").service-icon.block-about__services-img
+					h3.block-about__services-title.pb-1 Shaves
+					p Our shaving services will make you look really handsome
+				.block-about__services.pb-2 
+					img(src="/assets/img/haircuts-icon.png", alt="Haircuts").service-icon.block-about__services-img
+					h3.block-about__services-title.pb-1 Haircuts
+					p This classic and traditional service is perfect if you want your hair to be done the right way
+			a(href='#title4').block-about__icon
+				img(src="/assets/img/flash.png", alt="Flash")
+		#title4.separator
+		.block-about
+			.block-about__title 
+				span#aboutPrices
+				#console.console-underscore &#95;
+			.block-about__text 
+				h2.content-title.content-title-bg.pb-3 Price list
+				p.block-about__text-content Haircut: 10$
+				p.block-about__text-content Shave: 10$
+				p.block-about__text-content Haircut + Shave: 15$
+				p.block-about__text-content Mustache trim: 10$
+				p.block-about__text-content Beard Trim: 10$
+				p.block-about__text-content Mustache + Beard Trim: 15$
+			.block-about__img
+				img(src="/assets/img/prices.jpg", alt="Hours")
+			a(href='#').block-about__icon
+				img(src="/assets/img/flash.png", alt="Flash")
+			

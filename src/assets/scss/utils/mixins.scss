@@ -1,0 +1,44 @@
+@mixin dark-theme-background() {
+	background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+	            linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+	            linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+	            linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+	            linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+	            linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
+@mixin line-theme-background() {
+	background-color: #fff;
+	background-image:	linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+						linear-gradient(#eee .1em, transparent .1em);
+	background-size: 100% 1.2em;
+}
+
+@mixin modal() {
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+@mixin modal-content() {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid grey;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+@mixin line-theme-background-sm() {
+	background-color: #fff!important;
+	background-image:	linear-gradient(90deg, transparent 81px, #abced4 81px, #abced4 81px, transparent 81px),
+						linear-gradient(#eee .1em, transparent .1em)!important;
+	background-size: 100% 1.2em!important;
+}

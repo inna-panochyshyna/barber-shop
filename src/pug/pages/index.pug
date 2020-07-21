@@ -1,0 +1,27 @@
+extends ../layout/main
+
+block variables
+	- var title = 'LevelUp - Home';
+	- var pageClass = 'index-page';
+
+block content
+	section
+		#carousel.carousel
+			.carousel-slide.fade
+				img(src='/assets/img/carousel-1.jpg', alt="").carousel-slide__image
+				.carousel-slide__content 
+					p.carousel-slide__content-text Enjoy our barber services
+			.carousel-slide.fade
+				img(src='/assets/img/carousel-2.jpg', alt="").carousel-slide__image
+				.carousel-slide__content
+					p.carousel-slide__content-text The best masters of the Blade
+			.carousel-slide.fade
+				img(src='/assets/img/carousel-3.jpg', alt="").carousel-slide__image
+				.carousel-slide__content
+					p.carousel-slide__content-text The perfect place for cool men
+			a#carousel-prev.carousel-prev &#x276E;
+			a#carousel-next.carousel-next &#x276F;
+			.carousel-navigate
+				#carousel-navigate1.carousel-navigate__line.active
+				#carousel-navigate2.carousel-navigate__line
+				#carousel-navigate3.carousel-navigate__line

@@ -1,0 +1,92 @@
+.carousel {
+    position: relative;
+    width: 100vw;
+    height: $mainHeight;
+    .carousel-slide {
+        display: none;
+        &__image {
+            position: absolute;
+            width: 100vw;
+            height: $mainHeight;
+            object-fit: cover;
+        }
+        &__content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            padding: 40px 20px;
+            text-align: center;
+            background: rgba(0,0,0,.5);
+            &-text {
+                color: $colorBright;
+                font-size: 50px;
+                padding: 20px;
+            }
+        }
+    }
+    .fade {
+        animation-name: fade;
+        animation-duration: 2.5s;
+    }
+    @keyframes fade {
+        from {
+            opacity: .4;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .carousel-prev, .carousel-next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 30px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+    }
+    .carousel-next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    .carousel-prev:hover, .carousel-next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+    .carousel-navigate {
+        position: absolute;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-around;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%, -5%);
+        &__line {
+            cursor: pointer;
+            height: 3px;
+            width: 30px;
+            margin: 0 10px;
+            background-color: $colorLight;
+            transition: background-color 0.6s ease;
+            &:hover {
+                background-color: $colorGrey;
+            }
+        }
+        .active {
+            background-color: $colorGrey;
+        }
+    }
+}
+
+@media screen and (max-width: $phoneWidth) {
+        .carousel-slide {
+        &__content-text {
+            font-size: 40px!important;
+            padding: 0!important;
+        }
+    }
+}

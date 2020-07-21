@@ -1,0 +1,71 @@
+extends ../layout/main
+
+block variables
+	- var title = 'LevelUp - Contact';
+	- var pageClass = 'contact-page';
+
+block content
+	section
+		.block-contact
+			h1.block-title Contact us
+			.block-contact__info
+				h2.content-title.content-title-bg.pb-2 Get in touch
+				p.block-contact__info-text.pb-2 We are no rock stars, we are just barbers doing the craft and sharing the way we do it with you. If you are in Vinnytsia feel welcome to come in for a good haircut, shaves, beard and mustache trim. Stay true, stay classic.
+				.block-contact__info-location
+					div
+						img(src='/assets/img/location-icon.png', alt='Location').block-contact__info-img
+						p.p-all-1 Sobornaya str. 52, Vinnytsia, Ukraine
+					div
+						img(src='/assets/img/mail-icon.png', alt='Mail').block-contact__info-img
+						p.p-all-1 admin@gmail.com
+					div
+						img(src='/assets/img/phone-icon.png', alt='Phone').block-contact__info-img
+						p.p-all-1 +38(067)431-74-24
+				h2.content-title.content-title-sm.p-all-2 Subscribe and follow
+				.block-contact__info-social
+					a(href='https://www.facebook.com/' target='_blank')
+						img(src='/assets/img/facebook.png', alt='Facebook').block-contact__info-img
+					a(href='https://www.instagram.com/' target='_blank')
+						img(src='/assets/img/instagram.png', alt='Instagram').block-contact__info-img
+					a(href='https://www.pinterest.com/' target='_blank')
+						img(src='/assets/img/pinterest.png', alt='Pinterest').block-contact__info-img
+					a(href='https://www.youtube.com/' target='_blank')
+						img(src='/assets/img/youtube.png', alt='Youtube').block-contact__info-img
+			.block-contact__video
+				video(poster="/assets/video/video-poster.jpg")#videoPlayer.block-contact__video-show
+					source(src='/assets/video/promo-about.mp4')
+				.block-contact__video-bar
+					.block-contact__video-status
+						#displayStatus
+						#displayDuration
+					.block-contact__video-duration
+						#positionBar.block-contact__video-position
+				div.block-contact__video-buttons
+					button#videoRewind.block-contact__video-btn.btn-dark 
+						img(src="/assets/img/rewind.png", alt="Rewind icon")
+						p Rewind 
+					button#videoPlay.block-contact__video-btn.btn-dark
+						img(src="/assets/img/play.png", alt="Play icon")
+						p Play
+					button#videoStop.block-contact__video-btn.btn-dark
+						img(src="/assets/img/stop.png", alt="Stop icon")
+						p Stop
+					button#videoForward.block-contact__video-btn.btn-dark 
+						img(src="/assets/img/forward.png", alt="Forward icon")
+						p Forward
+			iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.271787316989!2d28.466214315687672!3d49.233336079326016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5b7b47978363%3A0xec5a859f35720568!2sSoborna%20St%2C%2052%2C%20Vinnytsia%2C%20Vinnyts'ka%20oblast%2C%2021000!5e0!3m2!1sen!2sua!4v1585693826741!5m2!1sen!2sua", frameborder='0', allowfullscreen='', aria-hidden='false', tabindex='0').block-contact__map
+			.block-contact__form
+				h2.content-title.content-title-bg Contact form
+				form()#form-contact.form
+					label(for='name') Your name
+					input#name.form-input.p-all-1(type='text', placeholder='Enter your name', required)
+					label(for='email') Your email
+					input#email.form-input.p-all-1(type='email', placeholder='Enter your email', required)
+					label(for='message') Your message
+					textarea#message.form-textarea.p-all-1(placeholder='Enter message', maxlength='1000', rows='5' required)
+					button(type='submit')#form-submit.form-btn.btn.btn-dark Submit
+			#modalMessage.block-contact__modal
+				.block-contact__modal-content.card-shadow
+					p#modalMessageText.modal-content__text
+					span.modal-content__close &times;
+					

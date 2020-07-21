@@ -1,0 +1,58 @@
+.block-barbers {
+	min-height: $mainHeight;
+	padding: 0 30px 20px;
+	display: grid;
+	grid-template-areas: 	'block-title block-title block-title'
+							'card card card'
+							'card card card';
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 100px repeat(2, 1fr);
+	grid-gap: 30px;
+	align-items: center;
+	justify-items: center;
+	&__card {
+		@include line-theme-background();
+		transition: 0.3s;
+    	&:hover {
+    		transform: scale(1.05, 1.05);
+    	}
+		&-img {
+			height: 350px;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+@media screen and (max-width: $desktopWidth) {
+	.block-barbers {
+		grid-template-areas:'block-title block-title'
+							'card card'
+							'card card'
+							'card card';
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 100px repeat(3, 1fr);
+		grid-gap: 30px;
+	}
+}
+
+@media screen and (max-width: $tableWidth) {
+	.block-barbers {
+		grid-template-areas:'block-title'
+							'card'
+							'card'
+							'card'
+							'card'
+							'card'
+							'card';
+		grid-template-columns: 1fr;
+		grid-template-rows: 100px repeat(6, 1fr);
+		grid-gap: 30px;
+	}
+}
+
+@media screen and (max-width: $phoneWidth) {
+	.block-barbers__card {
+		@include line-theme-background-sm();
+	}
+}

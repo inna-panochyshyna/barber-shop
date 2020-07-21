@@ -1,0 +1,38 @@
+extends ../layout/main
+
+block variables
+	- var title = 'LevelUp - Account';
+	- var pageClass = 'account-page';
+
+block content
+	section
+		.block-account
+			.account-profile
+				img(src='/assets/img/user.png', alt="User icon").account-profile__img
+				h2#accountDetails.p-all-2
+				.account-profile__navigation
+					button#toUsers.account-profile__navigation-btn.btn.btn-dark.account-admin Users
+					button#toMessages.account-profile__navigation-btn.btn.btn-dark.account-admin Messages
+					button#toBooking.account-profile__navigation-btn.btn.btn-dark Booking
+			.account-info
+				#accountUsers.account-info__content
+					h2.content-title.content-title-bg Users
+					form#makeAdmin.account-info__form.form
+						input#admin-email.account-info__form-input.form-input.p-all-1(type='email' placeholder='User email' required)
+						button.form-btn.btn.btn-dark Make admin
+					#makeAdminResponse.account-info__response
+					#usersData.card-shadow
+				#accountMessages.account-info__content
+					h2.content-title.content-title-bg.pb-3 Messages
+					#deleteMessageResponse.account-info__response
+					#userMessages
+				#accountBooking.account-info__content
+					h2.content-title.content-title-bg Booking
+					.account-booking  
+						img(src='/assets/img/feature.png', alt="Repair").account-booking__icon
+						.account-booking__text 
+							p Sorry! Online booking service is not available at the moment! 
+							p If you would like an appoinment please contact us:
+						.account-booking__phone
+							img(src='/assets/img/phone-icon.png', alt='Phone').account-booking__phone-img
+							p.p-all-1 +38(067)431-74-24

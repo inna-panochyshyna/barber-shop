@@ -1,0 +1,66 @@
+header
+	nav#mainMenu.header
+		div.header-logo
+			a(href='#')
+				img(src="/assets/img/logo.png", alt="Main logo").header-logo__img
+		ul.header-menu
+			li.header-menu__item
+				a(href='/').header-menu__link Home
+			li.header-menu__item
+				a(href='/about.html').header-menu__link About
+			li.header-menu__item
+				a(href='/barbers.html').header-menu__link Barbers
+			li.header-menu__item
+				a(href='/contact.html').header-menu__link Contact
+		.header-auth
+			a(href="#openModalLogin").header-auth__btn.btn.btn-dark.logged-out  
+				img(src="/assets/img/login.png", alt="Login icon").header-auth__btn-img
+				p Login
+			a(href="#openModalRegister").header-auth__btn.btn.btn-dark.logged-out 
+				img(src="/assets/img/register.png", alt="Register icon").header-auth__btn-img
+				p Register
+			a(href="/account.html")#account.header-auth__btn.btn.btn-dark.logged-in 
+				img(src="/assets/img/account.png", alt="Account icon").header-auth__btn-img
+				p Account
+			a(href="#")#logout.header-auth__btn.btn.btn-dark.logged-in 
+				img(src="/assets/img/logout.png", alt="Logout icon").header-auth__btn-img
+				p Logout
+		button#hamburger.toggle-hamburger.btn &#9776;
+		#openModalRegister.header-modal
+			.header-modal__content
+				.header-modal__content-head
+					img(src="/assets/img/register.png", alt="Register icon").modal-icon
+					h3.modal-title.content-title.content-title-sm Register
+					a(href='#close').modal-close &times;
+				.header-modal__content-body
+					form()#form-register.form
+						label(for='register-name') Your name
+						input#register-name.form-input.p-all-1(type='text' placeholder='Enter your name' required)
+						label(for='register-email') Your email
+						input#register-email.form-input.p-all-1(type='email' placeholder='Enter your email' required)
+						label(for='register-password') Your password
+						input#register-password.form-input.p-all-1(type='password' placeholder='Enter your password' minlength="6" maxlength="18" required)
+						button(type='submit')#register-submit.form-btn.btn.btn-dark Register
+						.form-container
+							p.pr-1 Already have an account?
+							a(href='#openModalLogin') Login
+						.form-error
+		#openModalLogin.header-modal
+			.header-modal__content
+				.header-modal__content-head
+					img(src="/assets/img/login.png", alt="Login icon").modal-icon
+					h3.modal-title.content-title.content-title-sm Login
+					a(href='#close').modal-close &times;
+				.header-modal__content-body
+					form()#form-login.form
+						label(for='login-email') Your email
+						input#login-email.form-input.p-all-1(type='email' placeholder='Enter your email' required)
+						label(for='login-password') Your password
+						input#login-password.form-input.p-all-1(type='password' placeholder='Enter your password' minlength="6" maxlength="18" required)
+						button(type='submit')#login-submit.form-btn.btn.btn-dark Login
+						.form-container
+							p.pr-1 Are you new?
+							a(href='#openModalRegister') Register
+						.form-error
+	.progress-container
+		#progressBar.progress-container__bar

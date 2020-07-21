@@ -1,0 +1,185 @@
+.block-account {
+	min-height: $mainHeight;
+	display: grid;
+	grid-template-columns: 300px 1fr;
+	.account-profile {
+		display: flex;
+		flex-direction: column;
+		&__role {
+			text-align: center;
+			padding-top: 20px;
+		}
+		&__img {
+			width: 150px;
+			margin-top: 20px;
+			object-fit: cover;
+			align-self: center;
+		}
+		&__info {
+			text-align: center;
+			padding: 20px;
+		}
+		&__navigation {
+    		display: flex;
+    		flex-direction: column;
+    		align-items: center;
+    		&-btn {
+    			text-align: left;
+    			margin: 10px 0;
+    			width: 80%;
+    			transition: 0.3s;
+    			&:hover {
+    				background-color: $colorBright;
+    			}
+    		}
+    		> .active {
+    			background-color: $colorSilver;
+    		}
+		}
+	}
+	.account-info {
+		@include line-theme-background();
+		padding: 45px 0 45px 100px;
+		min-height: $mainHeight;
+		&__content {
+    		display: none;
+    		padding: 20px;
+		}
+		&__response {
+			text-align: center;
+			font-size: 14px;
+			color: $colorBright;
+			padding: 5px;
+		}
+		&__form {
+			flex-direction: row;
+			justify-content: center;
+			&-input {
+				width: 40%;
+				align-self: center;
+				text-align: center;
+				margin-right: 10px;
+			}
+		}
+	}
+	#userMessages {
+		column-count: 2;
+	    column-gap: 30px;
+	}
+	.account-message {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: $colorLight;
+		break-inside: avoid;
+		margin-bottom: 30px;
+		&__card-header {
+			@include dark-theme-background();
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			color: $colorLight;
+			padding: 20px;
+			font-size: 14px;
+		}
+		&__card-title {
+			padding: 20px;
+			font-size: 22px;
+			font-weight: bold;
+		}
+		&__card-text {
+			padding: 0 20px 30px 20px;
+		}
+		&__card-trash {
+			margin: 10px;
+			align-self: flex-end;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+	.account-admin {
+		display: none;
+	}
+	.account-user {
+		display: grid;
+		grid-template-columns: 50px 75px repeat(3, 1fr);
+		min-height: 50px;
+		margin-top: 10px;
+		align-items: center;
+		justify-items: center;
+		background-color: $colorSilver;
+		&:nth-child(even) {
+   			background-color: $colorLight;
+		}
+		&__header {
+			@include dark-theme-background();
+			color: $colorLight;
+		}
+	}
+	.account-booking {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 30px;
+		height: 40vh;
+		&__icon {
+			width: 100px;
+		}
+		&__text {
+			text-align: center;
+			font-size: 22px;
+		}
+		&__phone {
+			display: flex;
+
+			&-img {
+				width: 30px;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $desktopWidth) {
+	.block-account {
+		grid-template-columns: 1fr!important;
+	}
+}
+
+@media screen and (max-width: $tableWidth) {
+	#userMessages {
+		column-count: 1!important;
+	}
+	.account-user {
+		grid-template-columns: 30px repeat(3, 1fr)!important;
+		font-size: 15px;
+		&__img {
+			display: none!important;
+		}
+	}
+	.account-info {
+		@include line-theme-background-sm();
+		padding: 0!important;
+	}
+}
+
+@media screen and (max-width: $phoneWidth) {
+	.account-info__form {
+			flex-direction: column!important;
+			&-input {
+				width: 80%!important;
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.account-user {
+		grid-template-columns: repeat(3, 1fr)!important;
+		font-size: 13px;
+		&__count {
+			display: none!important;
+		}
+	}
+}

@@ -1,0 +1,192 @@
+.block-contact {
+	min-height: $mainHeight;
+	display: grid;
+	grid-template-areas: 	'block-title block-title'
+							'social video'
+							'map form';
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 100px minmax(calc(100vh-260px), 1fr) minmax(calc(100vh-200px), 1fr);
+	grid-gap: 30px;
+	align-items: center;
+	justify-items: center;
+	&__form, &__info {
+		@include line-theme-background();
+		width: 100%;
+		height: 100%;
+		padding: 10px 15px 10px 100px;
+	}
+	&__info {
+		grid-area: social;
+		display: flex;
+		flex-direction: column;
+		&-text {
+			font-size: 20px;
+		}
+		&-location {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			text-align: center;
+			font-size: 16px;
+		}
+		&-social {
+			display: flex;
+			justify-content: space-around;
+		}
+		&-img {
+			height: 70px;
+		}
+	}
+	&__map {
+		grid-area: map;
+		width: 100%;
+		height: 100%;
+		border: none;
+		padding: 0 20px 10px 20px;
+	}
+	&__form {
+		grid-area: form;
+	}
+	&__video {
+		grid-area: video;
+		align-self: start;
+		padding: 0 20px;
+		&-bar {
+			@include dark-theme-background();
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 100%;
+   			margin-bottom: 9px;
+   			height: 40px;
+		}
+		&-duration {
+			height: 4px;
+			background-color: $colorSilver;
+			margin: 0 15px;
+			border-radius: 5px;
+		}
+		&-position {
+			height: 100%;
+			background-color: $colorBright;
+			border-radius: 5px;
+			width: 0px;
+		}
+		&-status {
+			display: flex;
+			padding: 0 0 5px 20px;
+			color: $colorLight;
+			font-size: 12px;
+		}
+		&-buttons {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&-btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 10px;
+			border-radius: 10px;
+			width: 120px;
+    		&:hover {
+    			cursor: pointer;
+    			background-color: $colorBright;
+    		}
+    		> img {
+    			width: 30px;
+    			filter: brightness(0) invert(1);
+    		}
+		}
+	}
+	&__modal {
+		display: none;
+    	@include modal();
+    	.block-contact__modal-content {
+    		@include line-theme-background();
+   		    @include modal-content();
+    		display: grid;
+    		grid-template-columns: 1fr 30px;
+    		width: 550px;
+    		height: 300px;
+    		> .modal-content__text {
+    			padding: 0 20px 0 80px;
+    			align-self: center;
+    			text-align: center;
+    			color: black;
+    			font-size: 26px;
+    		}
+    		> .modal-content__close {
+    			text-align: center;
+				color: #aaa;
+				font-size: 28px;
+				font-weight: bold;
+			}
+			> .modal-content__close:hover, .modal-content__close:focus {
+				color: black;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1120px) {
+	.block-contact {
+		grid-template-areas:'block-title block-title'
+							'social social'
+							'map form'
+							'video video';
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 100px calc(100vh-200px) minmax(calc(100vh-100px), 1fr) minmax(auto, calc(100vh-180px));
+		&__video {
+			width: 80%;
+		}
+	}
+}
+
+@media screen and (max-width: $tableWidth) {
+	.block-contact {
+		grid-template-areas:'block-title' 'social' 'map' 'form' 'video'!important;
+		grid-template-columns: 1fr!important;
+		grid-template-rows: 100px calc(100vh-200px) minmax(calc(100vh-100px), 1fr) auto minmax(auto, calc(100vh-200px))!important;
+		&__info, &__form {
+			width: 90%;
+		}
+		&__video {
+			width: 100%!important;
+		}
+	}
+}
+
+@media screen and (max-width: 615px) {
+	.block-contact {
+		grid-template-areas:'block-title' 'social' 'map' 'form'!important;
+		grid-template-columns: 1fr!important;
+		grid-template-rows: 100px calc(100vh-200px) minmax(calc(100vh-100px), 1fr) auto!important;
+		&__video {
+			display: none;
+		}
+		&__modal-content {
+			width: 90vw!important;
+		}
+	}
+}
+
+@media screen and (max-width: $phoneWidth) {
+	.block-contact {
+		&__info-location {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(3, 1fr);
+		}
+		&__info-img {
+			height: 40px;
+		}
+		&__info-text {
+			display: none;
+		}
+		&__form, &__info {
+			@include line-theme-background-sm();
+			padding: 10px;
+		}
+	}
+}

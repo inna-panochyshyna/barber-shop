@@ -1,0 +1,100 @@
+extends ../layout/main
+
+block variables
+	- var title = 'LevelUp - Barbers';
+	- var pageClass = 'barbers-page';
+
+block content
+	section
+		.block-barbers
+			h1.block-title Our barbers
+			a(href='#phillips').card-shadow.block-barbers__card  
+				img(src='/assets/img/barber-1.jpg', alt="Mattew Phillips").block-barbers__card-img
+				h3.content-title.content-title-sm.p-all-3 Mattew Phillips
+			a(href='#wilson').card-shadow.block-barbers__card 
+				img(src='/assets/img/barber-2.jpg', alt="Simon Wilson").block-barbers__card-img
+				h3.content-title.content-title-sm.p-all-3 Simon Wilson
+			a(href='#davies').card-shadow.block-barbers__card
+				img(src='/assets/img/barber-3.jpg', alt="Samuel Davies").block-barbers__card-img
+				h3.content-title.content-title-sm.p-all-3 Samuel Davies 
+			a(href='#adamson').card-shadow.block-barbers__card
+				img(src='/assets/img/barber-4.jpg', alt="Leo Adamson").block-barbers__card-img
+				h3.content-title.content-title-sm.p-all-3 Leo Adamson
+			a(href='#gilbert').card-shadow.block-barbers__card
+				img(src='/assets/img/barber-5.jpg', alt="Oliver Gilbert").block-barbers__card-img
+				h3.content-title.content-title-sm.p-all-3 Oliver Gilbert
+			a(href='#flatcher').card-shadow.block-barbers__card
+				img(src='/assets/img/barber-6.jpg', alt="Stanley Flatcher").block-barbers__card-img
+				h3.content-title.content-title-sm.p-all-3 Stanley Flatcher
+		#phillips.separator
+		.block-about
+			.block-about__title
+				span#aboutBarber1
+				#console.console-underscore &#95;
+			.block-about__img
+				img(src="/assets/img/barber-1.jpg", alt="Mattew Phillips")
+			.block-about__text 
+				h2.content-title.content-title-bg.pb-3 Mattew Phillips
+				p.block-about__text-content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quae. Repellat cumque maiores officia sunt labore magni? Modi magni, quo, quia accusamus ratione hic fugiat nemo dolore reprehenderit earum veritatis!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, beatae, quidem! Ab nostrum quibusdam porro neque officia assumenda dolor, minus labore consequatur iure odio? Blanditiis et totam voluptatibus provident tempora.
+			a(href="#").block-about__icon
+				img(src="/assets/img/up-arrow.png", alt="Up arrow")
+		#wilson.separator
+		.block-about
+			.block-about__title
+				span#aboutBarber2
+				#console.console-underscore &#95;
+			.block-about__img
+				img(src="/assets/img/barber-2.jpg", alt="Simon Wilson")
+			.block-about__text 
+				h2.content-title.content-title-bg.pb-3 Simon Wilson
+				p.about-block__text-content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quae. Repellat cumque maiores officia sunt labore magni? Modi magni, quo, quia accusamus ratione hic fugiat nemo dolore reprehenderit earum veritatis!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, beatae, quidem! Ab nostrum quibusdam porro neque officia assumenda dolor, minus labore consequatur iure odio? Blanditiis et totam voluptatibus provident tempora.
+			a(href='#').block-about__icon
+				img(src="/assets/img/up-arrow.png", alt="Up arrow")
+		#davies.separator
+		.block-about
+			.block-about__title
+				span#aboutBarber3
+				#console.console-underscore &#95;
+			.block-about__img
+				img(src='/assets/img/barber-3.jpg', alt="Samuel Davies")
+			.block-about__text 
+				h2.content-title.content-title-bg.pb-3 Samuel Davies
+				p.block-about__text-content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quae. Repellat cumque maiores officia sunt labore magni? Modi magni, quo, quia accusamus ratione hic fugiat nemo dolore reprehenderit earum veritatis!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, beatae, quidem! Ab nostrum quibusdam porro neque officia assumenda dolor, minus labore consequatur iure odio? Blanditiis et totam voluptatibus provident tempora.
+			a(href='#').block-about__icon
+				img(src="/assets/img/up-arrow.png", alt="Up arrow")
+		#adamson.separator
+		.block-about
+			.block-about__title
+				span#aboutBarber4
+				#console.console-underscore &#95;
+			.block-about__img
+				img(src='/assets/img/barber-4.jpg', alt="Leo Adamson")
+			.block-about__text 
+				h2.content-title.content-title-bg.pb-3 Leo Adamson
+				p.block-about__text-content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quae. Repellat cumque maiores officia sunt labore magni? Modi magni, quo, quia accusamus ratione hic fugiat nemo dolore reprehenderit earum veritatis!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, beatae, quidem! Ab nostrum quibusdam porro neque officia assumenda dolor, minus labore consequatur iure odio? Blanditiis et totam voluptatibus provident tempora.
+			a(href='#').block-about__icon
+				img(src="/assets/img/up-arrow.png", alt="Up arrow")
+		#gilbert.separator
+		.block-about
+			.block-about__title
+				span#aboutBarber5
+				#console.console-underscore &#95;
+			.block-about__img
+				img(src='/assets/img/barber-5.jpg', alt="Oliver Gilbert")
+			.block-about__text 
+				h2.content-title.content-title-bg.pb-3 Oliver Gilbert
+				p.block-about__text-content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quae. Repellat cumque maiores officia sunt labore magni? Modi magni, quo, quia accusamus ratione hic fugiat nemo dolore reprehenderit earum veritatis!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, beatae, quidem! Ab nostrum quibusdam porro neque officia assumenda dolor, minus labore consequatur iure odio? Blanditiis et totam voluptatibus provident tempora.
+			a(href='#').block-about__icon
+				img(src="/assets/img/up-arrow.png", alt="Up arrow")
+		#flatcher.separator
+		.block-about
+			.block-about__title
+				span#aboutBarber6
+				#console.console-underscore &#95;
+			.block-about__img
+				img(src='/assets/img/barber-6.jpg', alt="Stanley Flatcher")
+			.block-about__text 
+				h2.content-title.content-title-bg.pb-3 Stanley Flatcher
+				p.block-about__text-content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quae. Repellat cumque maiores officia sunt labore magni? Modi magni, quo, quia accusamus ratione hic fugiat nemo dolore reprehenderit earum veritatis!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, beatae, quidem! Ab nostrum quibusdam porro neque officia assumenda dolor, minus labore consequatur iure odio? Blanditiis et totam voluptatibus provident tempora.
+			a(href='#').block-about__icon
+				img(src="/assets/img/up-arrow.png", alt="Up arrow")

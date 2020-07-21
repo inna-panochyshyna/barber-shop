@@ -1,0 +1,179 @@
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+
+@import "header";
+@import "footer";
+@import "index";
+@import "about";
+@import "barbers";
+@import "contact";
+@import "account";
+
+
+body {
+    font-family: $mainFont;
+    font-size: $mainFontSize;
+    font-weight: $mainFontWeight;
+    display: grid;
+    grid-template-areas: "header" "content" "footer";
+    grid-template-rows: $headerHeight 1fr $footerHeight;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    position: fixed;
+    z-index: 1;
+    @include dark-theme-background();
+}
+
+main {
+    grid-area: content;
+}
+
+footer {
+    grid-area: footer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    @include dark-theme-background();
+}
+
+section {
+    min-height: $mainHeight;
+}
+
+.separator {
+    height: $headerHeight;
+}
+
+.block-title {
+    grid-area: block-title;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.content-title {
+    text-align: center;
+    grid-area: content-title;
+    color: $colorBright;
+    font-weight: bold;
+    &-sm {
+        font-size: 28px;    
+    }
+    &-bg {
+        font-size: 40px;
+    }
+}
+
+.service-icon {
+    height: 80px;
+}
+
+.card-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    &:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+}  
+
+.form-input, .form-textarea {
+    border: 1px solid grey;
+    border-radius: 4px;
+    margin: 10px 0;
+} 
+
+.form-btn {
+    align-self: center;
+}
+
+.form-container {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-error {
+    padding-top: 20px;
+    color: $colorBright;
+    text-align: center;
+}
+
+.btn {
+    padding: 15px 40px;
+    border-radius: 10px;
+    &:hover {
+    cursor: pointer;
+    }
+}
+
+.btn-dark {
+    background-color: $colorDark;
+    color: $colorLight;
+}
+
+.icon-sm {
+    height: 30px;
+}
+
+.p-all-1 {
+    padding: 10px;
+}
+
+.p-all-2 {
+    padding: 20px;
+}
+
+.p-all-3 {
+    padding: 30px;
+}
+
+.pb-1 {
+    padding-bottom: 10px;
+}
+
+.pb-2 {
+    padding-bottom: 20px;
+}
+
+.pb-3 {
+    padding-bottom: 30px;
+}
+
+.pr-1 {
+    padding-right: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: $colorDark;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $colorBright; 
+}
+
+@media screen and (max-width: $phoneWidth) {
+    .block-title {
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,22 @@
+// Font
+$mainFont: 'Roboto', Helvetica, Arial, sans-serif;
+$mainFontColor: #101010;
+$mainFontSize: 18px;
+$mainFontWeight: 400;
+
+// Height
+$headerHeight: 100px;
+$footerHeight: 50px;
+$mainHeight: calc(100vh - 150px); 
+
+// Color
+$colorLight: #fcfcfc; 
+$colorBright: #DC143C;
+$colorGrey: #484848;
+$colorSilver: #A9A9A9;
+$colorDark: #131313;
+
+// @media
+$desktopWidth: 960px;
+$tableWidth: 768px;
+$phoneWidth: 576px;
