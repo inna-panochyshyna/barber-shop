@@ -1,5 +1,3 @@
-![Project logo](https://git.epam.com/inna_panochyshyna/barbershop/raw/master/src/assets/img/logo.png)
-
 # Level Up (Barber-shop)
 
 Level Up (Barber-shop) is training project. Project is written on HTML, CSS, JS (with template Pug).
